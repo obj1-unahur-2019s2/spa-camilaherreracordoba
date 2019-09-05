@@ -20,5 +20,7 @@ test "test de spa" {
 	spa.atender(olivia)
 	spa.atender(olivia)
 	assert.that(olivia.gradoConcentracion() == 15)
-
+	ramiro.diaDeTrabajo()
+	spa.atender(ramiro)
+	assert.notThat(ramiro.tieneLaPielGrasosa())
 }

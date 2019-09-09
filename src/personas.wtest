@@ -1,0 +1,26 @@
+import personas.*
+import spa.*
+
+test "test de personas" {
+	olivia.recibirMasajes()
+	olivia.discute()
+	olivia.discute()
+	assert.that(olivia.gradoConcentracion() == 7 )
+	bruno.mediodiaEnCasa()
+	assert.notThat(bruno.estaPerfecto())
+	ramiro.diaDeTrabajo()
+	ramiro.jugarAlPaddle()
+	ramiro.comerseUnBigMac()
+	ramiro.recibirMasajes()
+	assert.that(ramiro.tieneLaPielGrasosa())
+	assert.that(ramiro.nivelDeContractura() == 3)
+}
+
+test "test de spa" {
+	spa.atender(olivia)
+	spa.atender(olivia)
+	assert.that(olivia.gradoConcentracion() == 15)
+	ramiro.diaDeTrabajo()
+	spa.atender(ramiro)
+	assert.notThat(ramiro.tieneLaPielGrasosa())
+}
